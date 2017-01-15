@@ -1,0 +1,22 @@
+{
+  "name": "raspberry-room-status",
+  "version": "0.1.0",
+  "description": "A room activity tracker and manages reseverations.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbrekle/RaspberryRoomStatus.git"
+  },
+  "keywords": [],
+  "author": "Marcel Hoyer, Daniel Seifarth, Jonas Brekle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbrekle/RaspberryRoomStatus/issues"
+  },
+  "homepage": "https://github.com/jbrekle/RaspberryRoomStatus#readme"
+}
