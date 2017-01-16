@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raspnerry Room Status</title>
+    <style>
+        body {
+            overflow: hidden; 
+            transition: all 0.5s ease;
+        }
+        body.light-off {
+            background-color: black;
+            color: lightyellow;
+        }
+        h1 { font-family: monospace; font-size: 48px; }
+        #root { 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <h1 id="state">Loading...</h1>
+    </div>
+    <script>
+        function update() {
+            window.fetch('/api')
+                .then(response => response.json())
+                .then(state => {
+                    const stateElem = document.getElementById('state');
+
+                    if (state.isLightOn) {
+                        document.body.classList.remove('light-off');
+                        stateElem.innerHTML = 'Licht an'
+                    }
+                    else {
+                        document.body.classList.add('light-off');
+                        stateElem.innerHTML = 'Licht aus'
+                    }
+                });
+        }
+
+        setInterval(() => update(), 1000);
+        update();
+    </script>
+</body>
