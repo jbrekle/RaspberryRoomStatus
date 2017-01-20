@@ -7,7 +7,7 @@ const pin = 12;
 rpio.open(pin, rpio.INPUT);
 
 function handleAPI(request, response) {
-    const isLightOn = rpio.read(pin) == 1;
+    const isLightOn = rpio.read(pin) == 0;
     response.writeHead(200, { 'Content-Type': 'application/json' });
     response.end(JSON.stringify({isLightOn}));
 }
