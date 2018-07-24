@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "A room activity tracker and manages reseverations.",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+	"rpio" : "0.9.22"
+  },
   "devDependencies": {},
   "scripts": {
     "start": "node index.js",
